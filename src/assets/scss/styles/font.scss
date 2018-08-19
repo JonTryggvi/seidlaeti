@@ -1,0 +1,22 @@
+@font-face {
+  font-family: 'Fog';
+
+  src: url('../fonts/FoglihtenNo04.woff') format('woff'),
+    url('../fonts/FoglihtenNo04.ttf') format('truetype');
+
+}
+
+@font-face {
+  font-family: 'Fog07';
+
+  src: url('../fonts/FoglihtenNo07.woff') format('woff'),
+    url('../fonts/FoglihtenNo07.ttf') format('truetype');
+
+}
+
+
+.top-bar-title a {
+    font-family: 'Fog07';
+    font-size: 3em;
+}
+

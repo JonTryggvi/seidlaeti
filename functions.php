@@ -51,5 +51,19 @@ require_once( 'library/sticky-posts.php' );
 /** Configure responsive image sizes */
 require_once( 'library/responsive-images.php' );
 
+require_once('library/thulur.php');
+
+
 /** If your site requires protocol relative url's for theme assets, uncomment the line below */
 // require_once( 'library/class-foundationpress-protocol-relative-theme-assets.php' );
+add_action('pre_get_posts', 'my_change_sort_order');
+function my_change_sort_order($query)
+{
+    if (is_archive()):
+        //If you wanted it for the archive of a custom post type use: is_post_type_archive( $post_type )
+        //Set the order ASC or DESC
+        $query->set('order', 'ASC');
+        //Set the orderby
+        $query->set('orderby', 'menu_order');
+    endif;
+};

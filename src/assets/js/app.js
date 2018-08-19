@@ -9,3 +9,9 @@ import Foundation from 'foundation-sites';
 //import './lib/foundation-explicit-pieces';
 
 $(document).foundation();
+
+
+$('.menu-button').on('click', function () {
+    $('.contact-menu').toggleClass('setMenu');
+    $(this).toggleClass('setButton');
+});

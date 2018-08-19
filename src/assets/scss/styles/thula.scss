@@ -1,0 +1,28 @@
+.main-grid .main-content.jt-flex-col {
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    article {
+        // width: 90%;
+        background-color: rgba(aliceblue, 0.5);
+        border-radius: 5px;
+        padding: 25px 15px;
+        min-height: 70vh;
+
+        h1 {
+            text-align: center;
+            margin-bottom: 44px;
+        }
+
+        .thulaImgContainer {
+            margin: 0 auto 20px;
+            width: 200px;
+            height: 200px;
+            overflow: hidden;
+            background-size: 40%;
+            background-repeat: no-repeat;
+            background-position: center;
+            transition: all 400ms ease;
+        }
+    }
+}

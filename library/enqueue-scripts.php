@@ -36,8 +36,12 @@ endif;
 if ( ! function_exists( 'foundationpress_scripts' ) ) :
 	function foundationpress_scripts() {
 
-		// Enqueue the main Stylesheet.
+		// Enqueue the main Stylesheet. https: 
+
 		wp_enqueue_style( 'main-stylesheet', get_stylesheet_directory_uri() . '/dist/assets/css/' . foundationpress_asset_path( 'app.css' ), array(), '2.10.4', 'all' );
+
+        wp_enqueue_style('fa', '//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css
+', array(), '2.10.4', 'all');
 
 		// Deregister the jquery version bundled with WordPress.
 		wp_deregister_script( 'jquery' );

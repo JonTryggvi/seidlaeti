@@ -2,7 +2,7 @@
 node_modules
 npm-debug.log
 dist
-config.yml
+# config.yml
 *.sass-cache*
 *.log
 .idea/

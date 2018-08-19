@@ -2,6 +2,8 @@
 .mobile-menu,
 .site-title-bar {
   @include hide-for(medium);
+//   background-color: transparent;
+//   color: $dark;
 }
 
 .desktop-menu,
@@ -16,7 +18,7 @@
 
 // Mobile menu
 .mobile-menu {
-  display: none; // prevents repaint caused by JS hiding menu onload
+    display: none; // prevents repaint caused by JS hiding menu onload
 }
 
 .off-canvas {
@@ -53,24 +55,25 @@
 // Tablet and desktop menu
 
 .top-bar {
-
+    background-color: transparent;
   .top-bar-title a {
-    font-size: 1rem;
-    color: #B9B9B9;
+    font-size: 1.5rem;
+    color: rgb(113, 113, 113);
     padding-left: 1rem;
     line-height: 1.8;
+
   }
 
   .menu a {
-    color: #e6e6e6;
+    color:  rgb(113, 113, 113);
     padding-top: 0;
     padding-bottom: 0;
     font-weight: bold;
-    font-size: 0.8rem;
+    font-size: .8rem;
     line-height: 1;
 
     &:hover:not(.button) {
-      background-color: #42525D;
+      background-color: transparent;
     }
   }
 

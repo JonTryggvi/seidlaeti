@@ -186,3 +186,19 @@ if ( ! function_exists( 'foundationpress_title_bar_responsive_toggle' ) ) :
 		}
 	}
 endif;
+
+if ( ! function_exists( 'cc_mime_types' ) ) :
+    function cc_mime_types($mimes)
+    {
+        $mimes['svg'] = 'image/svg+xml';
+        return $mimes;
+    }
+    add_filter('upload_mimes', 'cc_mime_types');
+endif;
+
+
+if (function_exists('acf_add_options_page')) {
+
+    acf_add_options_page('afc Options');
+
+}

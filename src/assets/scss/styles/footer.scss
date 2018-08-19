@@ -1,0 +1,23 @@
+
+.footer-grid {
+    justify-content: center;
+}
+.footer-grid  .footer-social {
+    display: inline-flex;
+    justify-content: space-evenly;
+    width: 50%;
+    .nav-item {
+        a {
+            transition: color 700ms ease;
+            color: rgba(white, 0.5);
+            font-size: 2em; 
+        }
+        &:hover {
+            a {
+                color: rgba(tomato, 0.7);
+
+            }
+        }
+    }
+    
+}

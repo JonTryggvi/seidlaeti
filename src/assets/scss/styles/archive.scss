@@ -1,0 +1,66 @@
+.main-grid .main-content.jt-flex {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 66px;
+}
+
+.jt-card {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 260px;
+    transition: all 500ms ease;
+    box-sizing: border-box;
+    width: 32%;
+    background-color: rgba(aliceblue, 0.2);
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 15px;
+
+    .thulaImgContainer {
+        margin-bottom: 20px;
+        width: 100px;
+        height: 100px;
+        overflow: hidden;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        opacity: 0.5;
+        transition: all 400ms ease;
+         
+    }
+
+    h2 {
+        width: 100%;
+        text-align: center;
+        text-shadow: 1px 1px 1px rgba(200, 200, 200, 0.5);
+        transform: scale(1);
+        transition: all 500ms ease;
+    }
+
+    &:hover {
+        box-shadow: 1px 1px 14px 1px rgba(0, 0, 0, 0.3);
+        background-color: rgba(aliceblue, 0.5);
+
+        .thulaImgContainer {
+            opacity: 0.6;
+            width: 120px;
+            height: 120px;
+            filter: drop-shadow((-2px) -2px 5px rgba(black, 0.5));
+        }
+
+        h2 {
+            transform: scale(1.5);
+
+            // font-size: 2.5em;
+       
+        }
+    }
+}
+
+.jt-card:first-child {
+    flex: 0 0 100%;
+}

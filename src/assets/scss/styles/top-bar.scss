@@ -1,0 +1,45 @@
+.site-header {
+    display: flex;
+    justify-content: center;
+    @include breakpoint(medium down) {
+        display: block;
+    }
+}
+.site-navigation.top-bar {
+    width: 90% !important;
+    .top-bar-left {
+        a {
+            color: $dark;
+        }
+    }
+    .top-bar-right {
+        
+        a {
+            font-family: 'Fog07';
+            font-size: 1.5em;
+            transition: all 400ms ease;
+            &:hover {
+               color: rgba(tomato, 0.7); 
+            }
+        }
+    }
+}
+
+
+
+
+.site-title-bar {
+    background-color: transparent;
+    width: 90%;
+    margin: 0 auto;
+    .title-bar-left {
+        // background-color: tomato;
+         .site-mobile-title {
+            a {
+                font-family: 'Fog07';
+                color: $dark;
+            }
+        }
+    }
+ 
+}

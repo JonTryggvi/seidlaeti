@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css?family=Allura|Bellefair');
+$black: #2c221a;
+$white: #cacec4;
+html, body {
+    overflow: auto;
+}
+body {
+  background: black;
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+
+}
+
+.wrapper {
+  width: 90vw;
+  margin: 0 auto;
+  @include breakpoint(medium down) {
+    width: 90vw;
+  }
+}
+
+
+
+.main-wrap {
+  margin-top:0;
+}
+
+.menu-button {
+  display: flex;
+  flex-flow: column nowrap;
+  cursor: pointer;
+  // justify-content: space-between;
+  position: fixed;
+  top: 15px;
+  right: 25px;
+  width: 20px;
+  height: 20px;
+  z-index: 99999;
+
+  span {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: transparentize($white, 0.3);
+    transition: all 400ms ease;
+    box-shadow: 1px 1px 4px $black;
+    @include breakpoint(small down) {
+      background: transparentize($black, 0.3);
+    }
+  }
+  span:nth-child(1){
+    top: 0;
+  }
+  span:nth-child(2){
+    top: 50%;
+    transition: all 1ms ease;
+    margin-top: -1px;
+  }
+  span:nth-child(3){
+    bottom: 0;
+
+  }
+
+}
+
+.contact-menu {
+  display: flex;
+  align-items: flex-start;
+  color: $white;
+  position: fixed;
+  top:-30vh;
+  right:0;
+  width: 70px;
+  height: 30vh;
+  background: transparentize($black, 0.6);
+  transition: all 300ms ease;
+  ul {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    width: 100%;
+    height: 20vh;
+    list-style: none;
+    margin: 10vh 0 0;
+
+    li {
+      font-family: 'Bellefair', serif;
+      font-size: 28px;
+      color: white;
+      transition: all 300ms ease;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      &:hover {
+        color: tomato;
+      }
+      a {
+        color: inherit;
+        display: inline-block;
+      }
+    }
+  }
+}
+.setMenu {
+  top: 0;
+
+}
+.setButton {
+  justify-content: flex-start;
+
+  span {
+    background: $white;
+    box-shadow: 1px 1px 4px transparent;
+  }
+  span:nth-child(1) {
+    transform: rotate(45deg);
+    top:50%;
+  }
+  span:nth-child(2) {
+    width: 0;
+  }
+  span:nth-child(3) {
+    transform: rotate(-45deg);
+    top:50%;
+  }
+}
+
+h1 {
+  font-family: 'fog', cursive;
+  text-transform: uppercase;
+  font-size: rem-calc(96);
+  line-height: 100px;
+  margin: 40px 0 0;
+  color: lighten(#2c221a, 10%);
+  transition: font-size 300ms ease;
+  @include breakpoint(small down){
+    font-size: 76px;
+  }
+}
+h2 {
+  font-family: 'fog07', serif;
+  text-transform: uppercase;
+  font-weight: lighter;
+  font-size: 28px;
+  text-align: right;
+  width: 35%;
+  color: lighten(#2c221a, 10%); ;
+}
+
+.forflex {
+  width: 100%;
+//   height: 70vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  .playcontainer {
+    width: 72%%;
+    max-width: 667px;
+    height: 80%;
+    @include breakpoint(medium down) {
+      margin: 0 auto;
+    }
+    @include breakpoint(small down) {
+      width: 90%;
+    }
+  }
+}
+
+// .title-bar {
+//  display: none !important;
+// }
+
+.footer-container {
+  border-top: 0;
+  height: 0;
+}
+.footer {
+  padding: 0;
+}
