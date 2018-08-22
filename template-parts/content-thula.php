@@ -1,17 +1,18 @@
 <?php 
-$imgObj = get_field('takn');
-$img = $imgObj['sizes']['medium'];
-$fakeImg = 'https://cdn1.iconfinder.com/data/icons/runes-vikings/205/ProtectionRune-512.png';
-$title = get_field('tite');
+$icon = get_field('takn');
 
-if(!isset($img)){
-    $img = $fakeImg;
+$title = get_field('title');
+
+if(!isset($icon)){
+    $icon = 'frigg';
 } 
 ?>
 
 <article>
     <h1><?php the_field('title'); ?></h1>
-    <div class="thulaImgContainer" style="background-image: url(<?php echo $img; ?>)" ></div>
+    <div class="thulaImgContainer" >
+        <?php echo get_template_part('/template-parts/psp/' . $icon); ?>
+    </div>
     <section>
         <?php the_field('thula'); ?>
     </section>

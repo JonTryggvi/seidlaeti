@@ -14,4 +14,11 @@ $(document).foundation();
 $('.menu-button').on('click', function () {
     $('.contact-menu').toggleClass('setMenu');
     $(this).toggleClass('setButton');
+    
+
+});
+
+$('#menuIcon').on('click', function () {
+    $('#menuIcon').toggleClass('hover');
+    
 });
