@@ -18,11 +18,27 @@
             margin: 0 auto 20px;
             width: 200px;
             height: 200px;
-            overflow: hidden;
+            // overflow: hidden;
             background-size: 40%;
             background-repeat: no-repeat;
             background-position: center;
             transition: all 400ms ease;
+            svg {
+                filter: drop-shadow( 0 0 0 $dark );
+                transition: filter 400ms cubic-bezier(0.645, 0.045, 0.355, 1);
+                g {
+                    fill: $dark;
+                    transition: fill 400ms cubic-bezier(0.645, 0.045, 0.355, 1);
+                }
+            }
+            &:hover {
+                svg {
+                    filter: drop-shadow( 5px 5px 5px rgba($dark, 0.4));
+                    g {
+                        fill: lighten($dark, 10%);
+                    }
+                }
+            }
         }
     }
 }

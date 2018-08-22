@@ -33,7 +33,12 @@ $backImage =$backImageRaw['sizes']['fp-xlarge'];
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
 				</span>
             </div>
-            <button aria-label="<?php _e( 'Main Menu', 'foundationpress' ); ?>" class="menu-icon" type="button" data-toggle="<?php foundationpress_mobile_menu_id(); ?>">menu</button>
+            <button aria-label="<?php _e( 'Main Menu', 'foundationpress' ); ?>" id="menuIcon" class="menu-icon" type="button" data-toggle="<?php foundationpress_mobile_menu_id(); ?>">menu 
+            <span id="menuIconContainer" class="menu-icon-container">
+                <span></span>
+                <span></span>
+            </span>
+        </button>
 		</div>
 
 		<nav class="site-navigation top-bar" role="navigation">

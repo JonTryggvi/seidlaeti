@@ -22,6 +22,10 @@ body {
   }
 }
 
+button:active, button:focus {
+    outline: none;
+}
+
 
 
 .main-wrap {
@@ -137,7 +141,7 @@ h1 {
   color: lighten(#2c221a, 10%);
   transition: font-size 300ms ease;
   @include breakpoint(small down){
-    font-size: 76px;
+    font-size: 45px;
   }
 }
 h2 {
@@ -157,7 +161,7 @@ h2 {
   justify-content: flex-start;
   align-items: center;
   .playcontainer {
-    width: 72%%;
+    width: 72%;
     max-width: 667px;
     height: 80%;
     @include breakpoint(medium down) {
