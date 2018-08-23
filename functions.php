@@ -67,3 +67,7 @@ function my_change_sort_order($query)
         $query->set('orderby', 'menu_order');
     endif;
 };
+
+
+add_editor_style();
+
